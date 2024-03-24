@@ -25,7 +25,7 @@ function Megszamlalas(n) {
 //Megszamlalas(5);
 
 //3. Eldöntés
-//pl eldönti, egy érték megtalálható e egy tömbben
+//pl eldönti, egy érték megtalálható-e egy tömbben
 function Eldontes(n, k) {
   let szamlalo = 0;
   for (i = 0; i <= n; i++) {
@@ -43,4 +43,17 @@ function Eldontes(n, k) {
     );
   }
 }
-Eldontes(10, 1);
+//Eldontes(10, 11);
+
+// 4. Kiválogatás
+//Kiválogatja egy n sokasságú tömbből a páratlan számokat, és egy új tömbbe helyezi őket
+function Kivalogatas(n) {
+  let parosSzamok = [];
+  for (i = 1; i <= n; i++) {
+    if (i % 2 != 0) {
+      parosSzamok.push(i);
+    }
+  }
+  console.log(parosSzamok);
+}
+Kivalogatas(5);
