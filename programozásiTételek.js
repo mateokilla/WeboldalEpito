@@ -1,0 +1,1 @@
+console.log("Ezek az alapvető programozási tételek!")
