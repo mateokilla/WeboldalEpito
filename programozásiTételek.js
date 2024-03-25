@@ -151,4 +151,15 @@ console.log(randomSzam(100))*/
 function randomSzamIntervallum(alsó, felső) {
   return Math.round(Math.random() * (felső - alsó) + alsó);
 }
-console.log(randomSzamIntervallum(10,500))
+//console.log(randomSzamIntervallum(10, 500));
+
+//random számokkal feltölteni egy tömböt
+
+function tombFeltoltoRandomSzammal(alsó, felso, darab) {
+  let randomTomb = [];
+  for (i = 0; i < darab; i++) {
+    randomTomb.push(Math.round(Math.random() * (felso - alsó) + alsó));
+  }
+  return randomTomb;
+}
+console.log(tombFeltoltoRandomSzammal(0, 100, 3));
