@@ -56,7 +56,7 @@ function Kivalogatas(n) {
   }
   console.log(parosSzamok);
 }
-Kivalogatas(5);
+//Kivalogatas(5);
 
 //szétválogatás tétele
 //egy bizonyos feltétel szerint szétválogatja a tömb elemeit
@@ -73,7 +73,7 @@ function Szetvalogatas(n) {
   console.log(`A páros számok tömbje az ${n} elemű tömbben ${parosSzamok}`);
   console.log(`A páros számok tömbje az ${n} elemű tömbben ${paratlanSzamok}`);
 }
-Szetvalogatas(20);
+//Szetvalogatas(20);
 
 //metszet
 //Két tömb azonos elemeinek kiválogatása egy harmadik tömbbe
@@ -84,59 +84,71 @@ function Metszet(tomb1, tomb2) {
   for (i = 0; i < tomb1.length; i++) {
     for (j = 0; j < tomb2.length; j++) {
       if (tomb1[i] == tomb2[j]) {
-        metszet.push(tomb1[i])
+        metszet.push(tomb1[i]);
       }
     }
   }
-  console.log(`A ${tomb1} és a ${tomb2} metszete a ${metszet} tömb.`)
+  console.log(`A ${tomb1} és a ${tomb2} metszete a ${metszet} tömb.`);
 }
 
-Metszet(elsoTomb, masodikTomb);
+//Metszet(elsoTomb, masodikTomb);
 
 //Unió
 //A és B tömb minden elemét szeretnénk C tömbbe tenni.
 
 const egyesTomb = [5, 3, 6, 2, 1];
 const kettesTomb = [6, 2, 7, 8, 9];
-function Unio(tomb1,tomb2){
-  let unio = []
-  for(i=0;i<tomb1.length;i++){
-    unio.push(tomb1[i])
+function Unio(tomb1, tomb2) {
+  let unio = [];
+  for (i = 0; i < tomb1.length; i++) {
+    unio.push(tomb1[i]);
   }
-  for(j=0;j<tomb2.length;j++){
-    unio.push(tomb2[j])
+  for (j = 0; j < tomb2.length; j++) {
+    unio.push(tomb2[j]);
   }
-  console.log(`A ${tomb1} és a ${tomb2} tömbök uniója a ${unio} tömb.`)
+  console.log(`A ${tomb1} és a ${tomb2} tömbök uniója a ${unio} tömb.`);
 }
-Unio(egyesTomb, kettesTomb)
-
+//Unio(egyesTomb, kettesTomb)
 
 //Maximum
 //Keressük a tömb legnagyobb elemét.
 
-const maxiTomb = [15,222,0,65,5,2]
-function Maximum(tomb){
+const maxiTomb = [15, 222, 0, 65, 5, 2];
+function Maximum(tomb) {
   maxErtek = tomb[0];
-  for(i=0;i<tomb.length;i++){
-    if(tomb[i]>maxErtek){
-      maxErtek = tomb[i]
+  for (i = 0; i < tomb.length; i++) {
+    if (tomb[i] > maxErtek) {
+      maxErtek = tomb[i];
     }
   }
-  console.log(maxErtek)
+  console.log(maxErtek);
 }
-Maximum(maxiTomb)
+//Maximum(maxiTomb)
 
 //Minimum
 //Keressük a tömb legnagyobb elemét.
 
-const miniTomb = [15,222,55,65,8,12]
-function Minimum(tomb){
+const miniTomb = [15, 222, 55, 65, 8, 12];
+function Minimum(tomb) {
   minErtek = tomb[0];
-  for(i=0;i<tomb.length;i++){
-    if(tomb[i]<minErtek){
-      minErtek = tomb[i]
+  for (i = 0; i < tomb.length; i++) {
+    if (tomb[i] < minErtek) {
+      minErtek = tomb[i];
     }
   }
-  console.log(minErtek)
+  console.log(minErtek);
 }
-Minimum(miniTomb)
+//Minimum(miniTomb)
+
+//random szám generátor
+//generál egy darab random számot
+/*function randomSzam (n){
+  return Math.round(Math.random()*n)
+}
+console.log(randomSzam(100))*/
+
+//random szám generátor egy intervallumban
+function randomSzamIntervallum(alsó, felső) {
+  return Math.round(Math.random() * (felső - alsó) + alsó);
+}
+console.log(randomSzamIntervallum(10,500))
